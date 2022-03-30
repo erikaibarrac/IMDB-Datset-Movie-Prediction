@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{biblatex}
+
+\addbibresource{references.bib}
+\newcommand{\adjustmentyear}{2020}
+
+\title{Future work}
+
+\begin{document}
+    \maketitle
+
+    Now that the data is cleaned, we will attempt to predict what factors will go into making the best possible movie with a specified budget and set number of prominent actors, using the two metrics: gross income, and metascore.
+    Gross income is the worldwide income that the movie brings in.
+    Metascore is the score, out of 100, given to a movie by critics and is used in considerations for academy awards.
+
+    To do this, we will perform three regressions using the data to build three models.
+    The first model will be used to predict gross income.
+    The second model will be used to predict metascore and will use the ``filled'' metascore values that were estimated from votes and average vote.
+    The third model will also be used to predict metascore, but will use the small dataset that contains real metascore values.
+    Using the coefficients on these models, we will determine which actors, directors, writers, and production companies will give the movie that will maximize the chosen metric.
+\end{document}

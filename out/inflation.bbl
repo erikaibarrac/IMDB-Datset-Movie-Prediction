@@ -1,0 +1,51 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{cpi}{dataset}{}
+      \name{author}{1}{}{%
+        {{hash=fe7be05967a2ea452b8fda96bcade718}{%
+           family={Labor\bibnamedelima Statistics},
+           familyi={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={United\bibnamedelimb States\bibnamedelima Bureau},
+           giveni={U\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {United States Bureau of Labor Statistics}%
+      }
+      \strng{namehash}{fe7be05967a2ea452b8fda96bcade718}
+      \strng{fullhash}{fe7be05967a2ea452b8fda96bcade718}
+      \strng{bibnamehash}{fe7be05967a2ea452b8fda96bcade718}
+      \strng{authorbibnamehash}{fe7be05967a2ea452b8fda96bcade718}
+      \strng{authornamehash}{fe7be05967a2ea452b8fda96bcade718}
+      \strng{authorfullhash}{fe7be05967a2ea452b8fda96bcade718}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{All items in U.S. city average, all urban consumers, not seasonally adjusted. Series ID CUUR0000SA0}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

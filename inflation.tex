@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{biblatex}
+
+\addbibresource{references.bib}
+\newcommand{\adjustmentyear}{2020}
+
+\title{Inflation}
+
+\begin{document}
+    \maketitle
+
+    Because the dollar amounts included in the IMDB Movie dataset's \texttt{worlwide\_gross\_income} column were not adjusted for inflation, it was necessary to make the adjustment in order to regularize the value of the gross income of the film so that meaningful predictions could be made.
+    To do this, this project made use of inflation data collected by the U.S. Bureau of Labor Statistics from 1913-present.
+    
+    A common measure of inflation over time is the Consumer Price Index.
+    The Consumer Price Index is defined to be
+    \begin{align}
+        CPI_t = \frac{C_t}{C_0}\cdot100 \label{eq:cpi}
+    \end{align}
+    where $C_t$ is the cost of a ``basket'' of goods in year $t$ and $C_0$ is the cost of a ``basket'' (of the same goods) in some base year.
+    Thus, the ratio of the cost of an item in one year to the cost of the item in another year can be calculated using the ratio of the consumer price indices.
+    \begin{align*}
+        \frac{CPI_1}{CPI_2} &= \frac{C_1\cdot100}{C_0} \cdot \frac{C_0}{C_2\cdot100} \\
+        &= \frac{C_1}{C_2}
+    \end{align*}
+    Thus, a formula for the value of an amount after inflation is given by
+    \begin{align}
+        C_2 = C_1 \frac{CPI_2}{CPI_1} \label{eq:inflation}
+    \end{align}
+
+    This project used the Bureau of Labor Statistics' Consumer Price Index dataset \cite*{cpi}.
+    The dataset was loaded and then inner-joined to the IMDB dataset by \texttt{year} and the \texttt{Annual} column was selected to give the average CPI for the year that the film was released.
+    Then, the CPI for \adjustmentyear~was taken from the dataset and equation \eqref{eq:inflation} was used to calculate the gross income for the film, adjusted to the equivalent value for \adjustmentyear.
+
+    A nearly identical process was followed for the \texttt{budget} column of the IMDB Movie dataset, however, before the adjustment for inflation could be applied, the currency amount needed to be converted to U.S. dollars.
+
+    \printbibliography
+\end{document}
